@@ -1,0 +1,90 @@
+/* ===== Overall Header ===== */
+.header {
+  font-family: "Poppins", sans-serif;
+  background-color: #0f172a; /* dark coder tone */
+  color: #f8fafc;
+  border-bottom: 2px solid #38bdf8;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.15);
+}
+
+/* ===== Top Bar (Logo + Nav Links) ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  background-color: #0f172a;
+}
+
+.brand .logo {
+  width: 48px;
+  height: 48px;
+}
+
+/* Right-side navigation links */
+.top-nav a {
+  color: #e2e8f0;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+/* ===== Bottom Menu Row (URL, TEXT, etc.) ===== */
+.menu-container {
+  background-color: #1e293b; /* slate gray coder tone */
+  border-top: 1px solid #38bdf8;
+  border-bottom: 1px solid #38bdf8;
+  padding: 6px 40px; /* reduced padding for compactness */
+}
+
+.menu-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly; /* evenly spread items */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar li a {
+  text-decoration: none;
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 14px; /* slightly smaller font */
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Hover animation */
+.menu-bar li a:hover {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  text-shadow: 0 0 6px #38bdf8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .top-nav a {
+    margin: 0 10px;
+  }
+}

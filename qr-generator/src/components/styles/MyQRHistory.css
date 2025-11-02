@@ -1,0 +1,47 @@
+.qr-history-container {
+  text-align: center;
+  margin: 80px auto;
+  width: 80%;
+  color: #fff;
+}
+
+.qr-history-container h2 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.qr-history-container p {
+  color: #cfd8dc;
+  margin-bottom: 20px;
+}
+
+.qr-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.qr-card {
+  background: linear-gradient(135deg, #2196f3, #00bcd4);
+  border-radius: 16px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.qr-card:hover {
+  transform: translateY(-5px);
+}
+
+.qr-card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.qr-details p {
+  margin: 4px 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    input { width: 300px; padding: 10px; font-size: 16px; }
+    button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+    #qrImage { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>QR Code Generator</h1>
+  <input type="text" id="content" placeholder="Enter text or URL" value="https://x.ai"/>
+  <br/>
+  <button onclick="generateQR()">Generate & Save</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function generateQR() {
+      const content = document.getElementById('content').value;
+      const resultDiv = document.getElementById('result');
+
+      try {
+        const response = await fetch('http://localhost:8081/api/qr/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content })
+        });
+
+        if (!response.ok) throw new Error('Failed to generate');
+
+        const data = await response.json();
+        resultDiv.innerHTML = `
+          <p><strong>Saved to database!</strong> ID: ${data.id}</p>
+          <img id="qrImage" src="http://localhost:8081${data.imageUrl}" alt="QR Code" />
+          <p><small>Scan with phone → ${content}</small></p>
+        `;
+      } catch (err) {
+        resultDiv.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

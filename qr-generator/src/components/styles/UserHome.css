@@ -1,0 +1,230 @@
+/* src/components/styles/UserHome.css */
+
+/* 🌤 Overall Page */
+.userhome {
+  padding: 40px;
+  background: #f7faff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #2c3e50;
+}
+
+/* 🌟 Header Section */
+.userhome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e3eeff;
+  padding-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eaf3ff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.user-info h1 {
+  font-size: 1.8rem;
+  color: #004a99;
+  margin: 0;
+}
+
+.user-info p {
+  color: #5b6b7f;
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+}
+
+/* ⚙️ Account Menu */
+.account-menu {
+  position: relative;
+}
+
+.menu-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.25);
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #005fd1;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease;
+  z-index: 10;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px 16px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #003366;
+  transition: 0.2s;
+}
+
+.dropdown-menu button:hover {
+  background: #eaf3ff;
+}
+
+.dropdown-menu .delete-btn {
+  color: #e74c3c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🧩 Action Cards Grid */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.action-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.08);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #e3eeff;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+  border-color: #007bff;
+}
+
+.action-card h3 {
+  margin-bottom: 8px;
+  color: #004a99;
+}
+
+.action-card p {
+  color: #5b6b7f;
+}
+
+/* 🖼️ QR Gallery Section */
+.qr-gallery {
+  margin-top: 40px;
+}
+
+.qr-gallery h2 {
+  color: #004a99;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+.masonry-grid {
+  column-count: 4;
+  column-gap: 16px;
+}
+
+.qr-card {
+  background: #ffffff;
+  display: inline-block;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e3eeff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  break-inside: avoid;
+}
+
+.qr-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.2);
+}
+
+.qr-card img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #eaf3ff;
+}
+
+.qr-info {
+  padding: 12px;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.empty-text {
+  text-align: center;
+  color: #6c757d;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+
+  .userhome-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+
+  .menu-btn {
+    width: 100%;
+  }
+}

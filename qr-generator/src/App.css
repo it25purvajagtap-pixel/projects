@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fafc;
+}
+
+.main-content {
+  padding-top: 130px; /* Navbar height */
+  min-height: 100vh;
+  overflow-y: auto;
+}

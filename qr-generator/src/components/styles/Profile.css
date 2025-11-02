@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.profile-container {
+  display: flex;
+  min-height: 90vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* ==== SIDEBAR ==== */
+.profile-sidebar {
+  width: 260px;
+  background-color: #1e293b;
+  border-right: 1px solid #38bdf8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+  margin-bottom: 10px;
+}
+
+.profile-info h3 {
+  margin: 5px 0;
+  color: #38bdf8;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.profile-links button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-links button:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
+/* ==== MAIN SECTION ==== */
+.profile-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.profile-main h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.profile-main p {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+/* ==== DASHBOARD CARDS ==== */
+.profile-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #38bdf8;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #e2e8f0;
+}
